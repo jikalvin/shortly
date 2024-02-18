@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Shortly
 
 ## Objective
@@ -43,3 +44,4 @@ Fork this repository, work on the requirements, push to the forked repository (u
 Make sure to include all source code in the repository.
 
 **Have fun building!** 🚀
+=======
