@@ -120,6 +120,56 @@ li {
   text-align: center;
 }
 
+.section-1 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40rem auto;
+  background-color: var(--white);
+  margin: 0 auto;
+  width: 80%;
+  height: 26.5rem;
+  max-height: 100%;
+  padding: 5.4rem 1.3rem;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  grid-row: span 1;
+  width: 80%;
+}
+
+.main-info p {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.main-info .cyan-btn {
+  width: max-content;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 2.1rem;
+  padding: 0.8rem 2.3rem;
+}
+
+h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 5.2rem;
+}
+.section-1 {
+  overflow-x: none;
+}
+.section-1 img {
+  object-fit: cover;
+  position: static;
+  display: inline-block;
+  grid-row: span 2;
+  margin-left: -3rem;
+  margin-top: -4rem;
+  align-items: stretch;
+  overflow-x: hidden;
+}
+
 
 @media (hover: hover) {
   .cyan-btn:hover {
