@@ -211,6 +211,7 @@ h1 {
 /* Dark purple background for the "Copy" button when clicked */
 .copy-button.copied {
   background-color: #6a1ca9;
+  width: 90%;
 }
 
 
@@ -450,6 +451,7 @@ h1 {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   transition: all ease-in-out 0.2s;
+  width: 90%;
 }
 
 .section-4 {
