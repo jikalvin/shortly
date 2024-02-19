@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useAppContext } from "../store/AppContext";
+import CopyableLink from "./Result";
+
 import icon1 from "../assets/images/icon-brand-recognition.svg";
 import icon2 from "../assets/images/icon-detailed-records.svg";
 import icon3 from "../assets/images/icon-fully-customizable.svg";
 
 const Statistics: React.FC = () => {
+    const { savedUrls } = useAppContext();
 
     return (
         <>
             <div className="section-3">
                 <button className="cyan-btn reset-results">Clear Results</button>
                 <section className="search-result-block">
+                    <div>
+                        <ul>
+                            {savedUrls.map((url, index) => (
+                                <CopyableLink 
+                                    key={index} 
+                                    label={url.original} 
+                                    url={url.shortened} 
+                                />
+                            ))}
+                        </ul>
+                    </div>
                 </section>
                 <h2>Advanced Statistics</h2>
                 <p className="info">Track how your links are performing across the web with our advanced statistics dashboard.</p>
