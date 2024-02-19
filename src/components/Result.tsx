@@ -13,12 +13,12 @@ const TruncateText: React.FC<Props> = ({ text, maxLength }) => {
 };
 
 const CopyableLink: React.FC<{ label: string; url: string }> = ({ label, url }) => {
-    const [isCopied, setIsCopied] = useState(false);
+    const [isNotCopied, setIsNotCopied] = useState(false);
 
     const handleCopyClick = () => {
         // Logic to copy the URL to the clipboard
         navigator.clipboard.writeText(url);
-        setIsCopied(true);
+        setIsNotCopied(true);
     };
 
     return (
@@ -28,8 +28,8 @@ const CopyableLink: React.FC<{ label: string; url: string }> = ({ label, url }) 
 
                 <div className="results">
                     <p className="url-text">{url}</p>
-                    <button onClick={handleCopyClick} className={!isCopied ? 'copied' : 'copy-btn'}>
-                        {isCopied ? 'Copied!' : 'Copy'}
+                    <button onClick={handleCopyClick} className={!isNotCopied ? 'copied' : 'copy-btn'}>
+                        {isNotCopied ? 'Copied!' : 'Copy'}
                     </button>
                 </div>
             </div>

@@ -6,8 +6,14 @@ import icon1 from "../assets/images/icon-brand-recognition.svg";
 import icon2 from "../assets/images/icon-detailed-records.svg";
 import icon3 from "../assets/images/icon-fully-customizable.svg";
 
+interface SavedUrl {
+    original: string;
+    shortened: string;
+}
+
 const Statistics: React.FC = () => {
     const { savedUrls } = useAppContext();
+    const lastFiveUrls: SavedUrl[] = savedUrls.slice(-5).reverse();
 
     return (
         <>
@@ -16,7 +22,7 @@ const Statistics: React.FC = () => {
                 <section className="search-result-block">
                     <div>
                         <ul>
-                            {savedUrls.map((url, index) => (
+                            {lastFiveUrls.map((url, index) => (
                                 <CopyableLink 
                                     key={index} 
                                     label={url.original} 
